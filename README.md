@@ -39,12 +39,7 @@ The sensor module uses an onboard **LM393 comparator** to convert moisture level
 The FC-28 soil moisture sensor works by measuring **electrical resistance in the soil**.
 
 - Wet soil → Conductivity increases → Resistance decreases  
-- Dry soil → Conductivity decreases → Resistance increases  
-
-This resistance variation is converted into:
-
-- **Analog voltage (AO)** → proportional to moisture  
-- **Digital signal (DO)** → based on threshold  
+- Dry soil → Conductivity decreases → Resistance increases   
 
 ---
 
@@ -52,7 +47,7 @@ This resistance variation is converted into:
 
 | Pin | Description |
 |-----|------------|
-| VCC | Power supply (3.3V–5V) |
+| VCC | Power supply |
 | GND | Ground |
 | AO  | Analog Output |
 | DO  | Digital Output |
@@ -63,7 +58,7 @@ This resistance variation is converted into:
 
 ### 🔹 Analog Mode
 
-- Sensor outputs a **variable voltage (0–~4.2V)**  
+- Sensor outputs a **variable voltage**  
 - Arduino reads it using analog pin (e.g., A0)  
 - Value changes continuously with moisture  
 
@@ -91,8 +86,6 @@ This resistance variation is converted into:
 
 ## 🔧 Hardware Setup & Connections
 
----
-
 ### 📷 Analog Mode Wiring
 
 ![Analog Wiring](https://playwithcircuit.com/wp-content/uploads/2024/07/Wiring-Soil-Moisture-Sensor-in-Analog-Mode.webp)
@@ -113,7 +106,7 @@ Connect the sensor’s VCC to Arduino 5V and GND to GND. The **AO pin** is conne
 
 ### 📷 Digital Mode Wiring
 
-![Digital Wiring]((https://playwithcircuit.com/wp-content/uploads/2024/07/Wiring-Soil-Moisture-Sensor-in-Digital-Mode.webp))
+![Digital Wiring](https://playwithcircuit.com/wp-content/uploads/2024/07/Wiring-Soil-Moisture-Sensor-in-Digital-Mode.webp)
 
 #### Connection Table (Digital Mode)
 
